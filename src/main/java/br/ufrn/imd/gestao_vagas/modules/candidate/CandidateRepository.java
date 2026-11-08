@@ -1,4 +1,8 @@
 package br.ufrn.imd.gestao_vagas.modules.candidate;
 
-public class CandidateRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface CandidateRepository extends JpaRepository<CandidateEntity, UUID> {
 }

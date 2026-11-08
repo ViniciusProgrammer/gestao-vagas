@@ -1,33 +1,62 @@
-HELP.md
+# =========================================================================
+# COMPILAÇÃO E ARTEFATOS (Maven)
+# =========================================================================
 target/
-.mvn/
-!**/src/main/**/target/
-!**/src/test/**/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.nextReleaseBackup
+pom.xml.releaseProperties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Permite o wrapper do Maven que já está no seu repositório (.mvn/wrapper)
+!.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
+# =========================================================================
+# CONFIGURAÇÕES DE IDEs
+# =========================================================================
+# IntelliJ IDEA
 .idea/
-*.iws
 *.iml
-*.ipr
+*.iws
+out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+*.factorypath
+
+# NetBeans
+nbproject/private/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+nbbuild/
+dist/
+nbdist/
 
-### VS Code ###
+# Visual Studio Code
 .vscode/
+
+# =========================================================================
+# DOCKER e CONTAINERIZAÇÃO
+# =========================================================================
+# Ignora dados persistidos por volumes locais se você mapear uma pasta
+.docker/
+# Se você gerar arquivos de ambiente com senhas locais (ex: .env)
+.env
+.env.local
+
+# =========================================================================
+# SISTEMA OPERACIONAL, LOGS E CACHE
+# =========================================================================
+# Logs da aplicação
+*.log
+logs/
+
+# Arquivos do Sistema Operacional
+/HS_err_pid*
+/reply_pid*
+.DS_Store
+Thumbs.db

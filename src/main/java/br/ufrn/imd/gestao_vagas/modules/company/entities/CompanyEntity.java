@@ -22,14 +22,16 @@ public class CompanyEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @NotBlank
+    @NotBlank(message = "O campo [username] é obrigatório")
     @Pattern(regexp = "\\S+", message = "O campo [username] não deve conter espaços")
     private String username;
 
     @Email(message = "O campo [email] deve conter um email válido")
+    @NotBlank(message = "O campo [email] é obrigatório")
     private String email;
 
     @Length(message = "O campo [password] deve conter entre (10) e (100) caracteres")
+    @NotBlank(message = "O campo [password] é obrigatório")
     private String password;
 
     private String website;

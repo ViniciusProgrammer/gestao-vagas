@@ -21,11 +21,11 @@ public class JobEntity {
     @NotBlank(message = "Este campo é obrigatório")
     private String level;
 
-    @Column(name = "company_id", insertable = false, updatable = false)
+    @Column(name = "company_id", nullable = false)
     private UUID companyId;
 
     @ManyToOne()
-    @JoinColumn(name = "company_id", nullable = false)
+    @JoinColumn(name = "company_id",  insertable = false, updatable = false)
     private CompanyEntity companyEntity;
 
     @CreationTimestamp
